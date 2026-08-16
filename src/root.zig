@@ -6,7 +6,7 @@ pub const c = @cImport({
 });
 
 pub const Noise = struct {
-    handle: c.fnNodeHandle,
+    handle: *anyopaque,
     seed: i32,
 
     pub const Error = error{
