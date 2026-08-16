@@ -1,0 +1,27 @@
+.{
+    .name = .noise,
+
+    .version = "0.0.0",
+    .minimum_zig_version = "0.16.0",
+
+    .dependencies = .{
+        .fastnoise = .{
+            .url = "https://github.com/Auburn/FastNoise2/archive/refs/tags/v1.1.0.tar.gz",
+            .hash = "N-V-__8AACA5DABMT7b2KNgGIlJMU9qpKrM5mnuLuUR2bBKb",
+        },
+
+        .fastsimd = .{
+            .url = "https://github.com/Auburn/FastSIMD/archive/16450dae9528727e500e7254f635a671f9c7ee2d.tar.gz",
+            .hash = "N-V-__8AAF0xBAA9ml_ssnaJbW-Rd5WlIxgRK74yb6bSwggu",
+        },
+    },
+
+    .fingerprint = 0xef3ac35fbd96bb83,
+
+    .paths = .{
+        "src",
+        "build.zig",
+        "build.zig.zon",
+        ".gitignore",
+    },
+}
