@@ -222,5 +222,8 @@ pub fn build(builder: *std.Build) void {
         .optimize = optimize,
     });
 
+    bindings_module.addIncludePath(fastnoise.path("include"));
+    bindings_module.addIncludePath(fastsimd.path("include"));
+
     bindings_module.linkLibrary(library);
 }
