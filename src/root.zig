@@ -1,3 +1,5 @@
+const std = @import("std");
+
 pub const c = @cImport({
     @cInclude("stdbool.h");
     @cInclude("FastNoise/FastNoise_C.h");
@@ -12,7 +14,7 @@ pub const Noise = struct {
     };
 
     pub fn init(encoded_node_tree: [:0]const u8, seed: i32) Error!Noise {
-        const handle = c.fnNewFromEncodedNodeTree(encoded_node_tree.ptr, c.FASTSIMD_LEVEL_MAX);
+        const handle = c.fnNewFromEncodedNodeTree(encoded_node_tree.ptr, std.math.maxInt(c_uint));
 
         if (handle == null) return Error.InvalidEncodedNodeTree;
 
