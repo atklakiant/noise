@@ -1,4 +1,4 @@
-const c = @cImport({
+pub const c = @cImport({
     @cInclude("FastNoise/FastNoise_C.h");
 });
 
