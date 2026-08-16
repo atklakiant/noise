@@ -14,9 +14,7 @@ pub const Noise = struct {
     };
 
     pub fn init(encoded_node_tree: [:0]const u8, seed: i32) Error!Noise {
-        const handle = c.fnNewFromEncodedNodeTree(encoded_node_tree.ptr, std.math.maxInt(c_uint));
-
-        if (handle == null) return Error.InvalidEncodedNodeTree;
+        const handle = c.fnNewFromEncodedNodeTree(encoded_node_tree.ptr, std.math.maxInt(c_uint)) orelse return Error.InvalidEncodedNodeTree;
 
         return .{
             .handle = handle,
