@@ -198,7 +198,7 @@ pub fn build(builder: *std.Build) void {
             .root_module = dispatch_module,
         });
 
-        dispatch_module.addObjectFile(object.getEmittedBin());
+        module.addObjectFile(object.getEmittedBin());
     }
 
     library.installHeader(fastnoise.path("include/FastNoise/FastNoise_C.h"), "FastNoise/FastNoise_C_impl.h");
