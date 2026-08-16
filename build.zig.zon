@@ -16,7 +16,7 @@
         },
     },
 
-    .fingerprint = 0xef3ac35fbd96bb83,
+    .fingerprint = 0xfda99629d0b40cce,
 
     .paths = .{
         "src",
