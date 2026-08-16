@@ -1,4 +1,5 @@
 pub const c = @cImport({
+    @cInclude("stdbool.h");
     @cInclude("FastNoise/FastNoise_C.h");
 });
 
